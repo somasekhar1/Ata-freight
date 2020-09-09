@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table align="center" border="1">
+    <tr>
+        <td>emp_id</td>
+        <td>start_leave</td>
+        <td>end_leave</td>
+        <td>des_cription</td>
+        <td>total_leaves</td>
+        <td>status</td>
+    </tr>
+    <tr>
+    {% for x in emp %}
+        <tr>
+        <td>{{ x.id }}</td>
+        <td>{{ x.start_leave_date }}</td>
+        <td>{{ x.end_leave_date }}</td>
+        <td>{{ x.description }}</td>
+        <td>{{ x.total_leaves }}</td>
+        <td style="color: green">{{ x.status }}</td>
+        </tr>
+    {% endfor %}
+    </tr>
+</table>
+</body>
+</html>
